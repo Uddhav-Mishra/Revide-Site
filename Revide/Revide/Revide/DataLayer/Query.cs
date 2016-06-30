@@ -68,19 +68,6 @@ namespace Revide.DataLayer
             sda.Fill(dt);
             return dt;
         }
-        public DataTable getUserDetails()
-        {
-            SqlDataAdapter sda = new SqlDataAdapter("getUserDetails", con);
-           DataTable dt = new DataTable();
-            sda.Fill(dt);
-            return dt;
-        }
-        public DataTable getVideoReport()
-        {
-            SqlDataAdapter sda = new SqlDataAdapter("getMovieReport", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            return dt;
-        }
+
     }
 }

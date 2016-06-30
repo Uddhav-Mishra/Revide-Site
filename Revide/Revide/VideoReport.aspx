@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage/Main.Master" AutoEventWireup="true"
-    CodeBehind="EndUserReport.aspx.cs" Inherits="Revide.WebForm6" %>
+    CodeBehind="VideoReport.aspx.cs" Inherits="Revide.WebForm7" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
@@ -12,42 +12,56 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_Main" runat="server">
     <div style="margin-top: 15px;">
-     <div class="container">
-        <p class="bg-primary" align="center" style="font-size:25px;">USER REPORT</p>
-    </div>
+        <div class="container">
+            <p class="bg-primary" align="center" style="font-size: 25px;">
+                VIDEO REPORT</p>
+        </div>
+        <div>
             <div class="table-responsive">
-                <table id="myTable" class="display table" width="100%">
+                <table id="VideoReport" class="display table" width="100%">
                     <thead>
                         <tr>
                             <th>
-                                Name
+                                Full Title
                             </th>
                             <th>
-                                E-Mail
+                                Language
                             </th>
                             <th>
-                                Country
+                                Poster Source
                             </th>
                             <th>
-                                Mobile-no.
+                                Release Date
+                            </th>
+                            <th>
+                                Genre
+                            </th>
+                            <th>
+                                Overall Rating
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <asp:Repeater ID="rpt_details" runat="server">
+                        <asp:Repeater ID="rpt_videoreport" runat="server">
                             <ItemTemplate>
                                 <tr>
                                     <td>
-                                        <%# DataBinder.Eval(Container.DataItem,"Username") %>
+                                        <%# DataBinder.Eval(Container.DataItem, "FullTitle")%>
                                     </td>
                                     <td>
-                                        <%# DataBinder.Eval(Container.DataItem, "LoginID")%>
+                                        <%# DataBinder.Eval(Container.DataItem, "Language")%>
                                     </td>
                                     <td>
-                                        <%# DataBinder.Eval(Container.DataItem, "Country")%>
+                                        <%# DataBinder.Eval(Container.DataItem, "PosterSrc")%>
                                     </td>
                                     <td>
-                                        <%# DataBinder.Eval(Container.DataItem, "Phone")%>
+                                        <%# DataBinder.Eval(Container.DataItem, "ReleaseDate")%>
+                                    </td>
+                                    <td>
+                                        <%# DataBinder.Eval(Container.DataItem, "Genre")%>
+                                    </td>
+                                    <td>
+                                        <%# DataBinder.Eval(Container.DataItem, "Overall_rating")%>
                                     </td>
                                 </tr>
                             </ItemTemplate>
@@ -57,19 +71,19 @@
                 <!--input type="button" id="btnExport"text="download"-->
             </div>
         </div>
-        <button id="btnExport" width="20px" height="20px" class="btn btn-success">
+        <button id="btnEx" width="20px" height="20px" class="btn btn-success">
             download</button>
         <div>
         </div>
         <script>
             $(document).ready(function () {
-                $('#myTable').dataTable();
+                $('#VideoReport').dataTable();
 
-                $("#btnExport").click(function () {
-                    $("#myTable").table2excel({
+                $("#btnEx").click(function () {
+                    $("#VideoReport").table2excel({
                         exclude: ".excludeThisClass",
                         name: "Worksheet Name",
-                        filename: "SomeFile" //do not include extension
+                        filename: "SomeFile"
                     });
                 })
 
