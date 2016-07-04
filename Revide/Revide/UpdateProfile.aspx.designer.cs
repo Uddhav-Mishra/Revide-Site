@@ -13,6 +13,24 @@ namespace WebApplication7 {
     public partial class WebForm3 {
         
         /// <summary>
+        /// VoteUpOff control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage VoteUpOff;
+        
+        /// <summary>
+        /// fileuploadimages control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fileuploadimages;
+        
+        /// <summary>
         /// tb1 control.
         /// </summary>
         /// <remarks>

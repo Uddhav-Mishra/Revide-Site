@@ -218,6 +218,7 @@
   <ItemGroup>
     <Folder Include="css\" />
     <Folder Include="Forms\" />
+    <Folder Include="images\Profile\" />
     <Folder Include="js\" />
     <Folder Include="obj\Debug\Package\" />
     <Folder Include="obj\Debug\TempPE\" />

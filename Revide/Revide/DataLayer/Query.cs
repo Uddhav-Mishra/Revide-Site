@@ -89,5 +89,22 @@ namespace Revide.DataLayer
             sda.Fill(dt);
             return dt;
         }
+        public DataTable getProfilePhoto()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("getProfilePhoto", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
+
+
+        public DataTable getUserProfile(int x)
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("select * from UserDetails ud join [User] u on ud.UserID=u.ID where ud.UserID =\'"+x.ToString()+ "\'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
+
     }
 }

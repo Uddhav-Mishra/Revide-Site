@@ -13,6 +13,15 @@ namespace Revide {
     public partial class UserProfileShow {
         
         /// <summary>
+        ///  rpt_userprofile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater  rpt_userprofile;
+        
+        /// <summary>
         /// btn_edit control.
         /// </summary>
         /// <remarks>

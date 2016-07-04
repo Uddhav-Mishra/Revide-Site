@@ -6,13 +6,33 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlTypes;
+using System.IO;
+using System.Configuration;
+
 namespace WebApplication7
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            using (SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myConn"].ConnectionString))
+            {
+                if (conn.State != ConnectionState.Open)
+                {
+                    conn.Open();
+                }
+                using (SqlCommand cm = new SqlCommand("getProfilePhoto", conn))
+                {
+                    cm.Parameters.Add("@id", SqlDbType.VarChar).Value = 1;
+                    cm.CommandType = CommandType.StoredProcedure;
+                    string s = (string)cm.ExecuteScalar();
+                    
+                        s = "~/" + s;
+                        VoteUpOff.Attributes["src"] = ResolveUrl(s);
+                    
+                }
+            }
         }
         // id will be a session variable and will be provided by previous pages
         protected void Button1_Click(object sender, EventArgs e)
@@ -23,6 +43,11 @@ namespace WebApplication7
             string phone = tb4.Text.Trim();
             string country = tb5.Text.Trim();
 
+            Image img = new Image();
+            string filename = Path.GetFileName(fileuploadimages.PostedFile.FileName);
+            fileuploadimages.SaveAs(Server.MapPath("images/Profile/" + filename));
+            string imgdest = "images/Profile/" + filename;
+
             using (SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myConn"].ConnectionString))
             {
                 if (conn.State != ConnectionState.Open)
@@ -32,12 +57,13 @@ namespace WebApplication7
 
                 using (SqlCommand cmd = new SqlCommand("UpdateProfile", conn))
                 {
-                    // cmd.Parameters.Add("@id", SqlDbType.VarChar).Value =id;
+                    cmd.Parameters.Add("@id", SqlDbType.VarChar).Value = 1;
                     cmd.Parameters.Add("@name", SqlDbType.VarChar).Value = name;
                     cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
                     cmd.Parameters.Add("@age", SqlDbType.VarChar).Value = age;
                     cmd.Parameters.Add("@phone", SqlDbType.VarChar).Value = phone;
                     cmd.Parameters.Add("@country", SqlDbType.VarChar).Value = country;
+                    cmd.Parameters.Add("@imgdest", SqlDbType.VarChar).Value = imgdest;
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }
@@ -45,7 +71,6 @@ namespace WebApplication7
         }
 
     }
-
 }
 
 /*
