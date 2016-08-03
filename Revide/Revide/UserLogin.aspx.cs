@@ -9,7 +9,9 @@ using System.Data.SqlClient;
 using System.Data;
 using ASPSnippets.FaceBookAPI;
 using System.Web.Script.Serialization;
-
+using System.Web.UI.HtmlControls;
+using System.Configuration;
+using System.Diagnostics;
 namespace Revide
 {
     public class FaceBookUser
@@ -42,9 +44,9 @@ namespace Revide
                     FaceBookUser faceBookUser = new JavaScriptSerializer().Deserialize<FaceBookUser>(data);
                     faceBookUser.PictureUrl = string.Format("https://graph.facebook.com/{0}/picture", faceBookUser.Id);
 
-                    userNameFromFBGoogle.Value=faceBookUser.Name;
+                    userNameFromFBGoogle.Value = faceBookUser.Name;
                     emailIDFromFBGoogle.Value = faceBookUser.Email;
-                 
+
                 }
             }
         }
@@ -82,9 +84,10 @@ namespace Revide
 
                             cmd.ExecuteNonQuery();
                         }
+
                     }
 
-                    Response.Redirect("PostLogin.aspx");
+                    Response.Redirect("Homepage.aspx");
 
                 }
             }
@@ -97,7 +100,46 @@ namespace Revide
 
         }
 
-        protected void Button2_Click(object sender, EventArgs e) { 
+        public void Button2_Click(object sender, EventArgs e)
+        {
+            string id = login_email.Text;
+            string password = login_password.Text;
+
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myconn"].ConnectionString);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from [User] where LoginID=\'" + id + "\' and Password=\'" + password + "\' and IsActive=\'1\'", con);
+            sda.GetFillParameters();
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            if (dt.Rows.Count >= 1)
+            {
+                string roleid = null, username = null, loginid = null;
+                //Session["username"] = DataBinder.Eval(e.Item.DataItem, "customer_ID").ToString();
+                using (SqlCommand command = new SqlCommand("select * from [User] where LoginID=\'" + id + "\' and Password=\'" + password + "\' and IsActive=\'1\'", con))
+                {
+                    con.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        roleid = reader["RoleID"].ToString();
+                        username = reader["Username"].ToString();
+                        loginid = reader["ID"].ToString();
+                    }
+                }
+                Session["username"] = username;
+                Session["userID"] = loginid;
+                if(roleid == "1")
+                Response.Redirect("Homepage.aspx");
+                else
+                Response.Redirect("AdminPanel.aspx");
+            }
+            else
+            {   
+                //Response.Redirect("UserLogin.aspx");
+                ScriptManager.RegisterStartupScript(this, GetType(), "alertMessage", "alert('Check username/password. If error persists contact the administrator <admin@revide.com>');", true);
+            }
         }
+        //return dt;
+
     }
 }

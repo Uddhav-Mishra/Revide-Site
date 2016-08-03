@@ -21,13 +21,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_Main" runat="server">
 
-    <h1 align="center">All Movies</h1>
+    <h1 align="center">Videos</h1>
     </br>
     <div class="col-sm-9" style="margin-left:200px">
         <div class="panel-group">
             <asp:Repeater ID="rpt_pg" runat="server">
                 <ItemTemplate>
-                    <a href="">
+                    <a href="VideoDetails.aspx?video_id=<%#DataBinder.Eval(Container.DataItem,"ID")%>">
                     
                     <div class="panel panel-primary">
                         <div class="panel-heading">

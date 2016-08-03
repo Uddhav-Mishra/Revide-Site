@@ -16,6 +16,7 @@ namespace WebApplication7
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(Session["userID"]); 
             using (SqlConnection conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["myConn"].ConnectionString))
             {
                 if (conn.State != ConnectionState.Open)
@@ -24,7 +25,7 @@ namespace WebApplication7
                 }
                 using (SqlCommand cm = new SqlCommand("getProfilePhoto", conn))
                 {
-                    cm.Parameters.Add("@id", SqlDbType.VarChar).Value = 1;
+                    cm.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
                     cm.CommandType = CommandType.StoredProcedure;
                     string s = (string)cm.ExecuteScalar();
                     
@@ -57,7 +58,7 @@ namespace WebApplication7
 
                 using (SqlCommand cmd = new SqlCommand("UpdateProfile", conn))
                 {
-                    cmd.Parameters.Add("@id", SqlDbType.VarChar).Value = 1;
+                    cmd.Parameters.Add("@id", SqlDbType.VarChar).Value = Convert.ToInt32(Session["userID"]);
                     cmd.Parameters.Add("@name", SqlDbType.VarChar).Value = name;
                     cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = email;
                     cmd.Parameters.Add("@age", SqlDbType.VarChar).Value = age;
@@ -66,6 +67,8 @@ namespace WebApplication7
                     cmd.Parameters.Add("@imgdest", SqlDbType.VarChar).Value = imgdest;
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
+
+                    Response.Redirect("UserProfileShow.aspx");
                 }
             }
         }

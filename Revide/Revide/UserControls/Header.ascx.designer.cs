@@ -22,6 +22,42 @@ namespace Revide.UserControls {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl beforeLogin;
         
         /// <summary>
+        /// signInHref control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor signInHref;
+        
+        /// <summary>
+        /// SignIn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal SignIn;
+        
+        /// <summary>
+        /// signUpHref control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor signUpHref;
+        
+        /// <summary>
+        /// SignUp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal SignUp;
+        
+        /// <summary>
         /// afterLogin control.
         /// </summary>
         /// <remarks>
@@ -38,5 +74,14 @@ namespace Revide.UserControls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUser;
+        
+        /// <summary>
+        /// logmeout2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button logmeout2;
     }
 }

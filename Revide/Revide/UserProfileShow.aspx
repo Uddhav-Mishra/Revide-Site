@@ -11,58 +11,54 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-12 lead">
-                                User profile<hr>
+                                User profile
+                                <hr>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4 text-center">
                                 <img id="profile_pic" class="img-circle avatar avatar-original" style="-webkit-user-select: none;
-                                    display: block; margin: auto;" src="https://plus.google.com/u/0/_/focus/photos/public/AIbEiAIAAABECIuJ28bnlo3B7gEiC3ZjYXJkX3Bob3RvKihlNDAyYWY0MTkwMzU3Mjg1NWM1MDJkNzEwMTA0MTRjYmRmMmI3OTNhMAE8GIBH583UIwWR2FWjZ_ynZRvujg?sz=64"
-                                    height="150px" width="150px">
+                                    display: block; margin: auto;" src="" height="150px" width="150px">
                             </div>
                             <div class="col-md-8">
                                 <div class="row">
-                                <asp:Repeater ID="rpt_userprofile" runat="server">
-                                            <ItemTemplate>
-                                    <div class="col-md-12">
-                                        <h1 class="only-bottom-margin" id="name">
-                                           <%# Eval( "Username" ) %>
-                                        </h1>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        
-                                                <span id="email" class="text-muted">Email:</span>
-                                                <%# Eval( "EmailID" ) %><br>
-                                                <span id="country" class="text-muted">Country:</span>
-                                                <%#Eval( "Country" ) %><br>
-                                                <span id="age" class="text-muted">Age:</span>
-                                                <%# Eval( "Age" )%><br>
-                                                <span id="phone" class="text-muted">Phone:</span>
-                                                <%#Eval( "Phone" ) %><br>
-                                                <span id="birthdate" class="text-muted">Birth date:</span>
-                                                <%# Eval( "DOB" )%><br>
-                                                <script> 
+                                    <asp:Repeater ID="rpt_userprofile" runat="server">
+                                        <ItemTemplate>
+                                            <div class="col-md-12">
+                                                <h1 class="only-bottom-margin" id="name">
+                                                    <%# Eval( "Username" ) %>
+                                                </h1>
+                                            </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <span id="email" class="text-muted">Email:</span>
+                                                    <%# Eval( "EmailID" ) %><br>
+                                                    <span id="country" class="text-muted">Country:</span>
+                                                    <%#Eval( "Country" ) %><br>
+                                                    <span id="age" class="text-muted">Age:</span>
+                                                    <%# Eval( "Age" )%><br>
+                                                    <span id="phone" class="text-muted">Phone:</span>
+                                                    <%#Eval( "Phone" ) %><br>
+                                                    <script type="text/javascript"> 
                                                     $("#profile_pic").attr("src", "<%# Eval( "ProfilePhoto" )%>");
-                                                </script>
-                                            </ItemTemplate>
-                                        </asp:Repeater>
-                                        <br>
-                                        <small class="text-muted">Created: 01.01.2015</small>
-                                    </div>
+                                                    </script>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                    <br>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <hr>
-                                <asp:LinkButton ID="btn_edit" class="btn btn-default pull-right" runat="server" OnClick="btn_edit_Click"><i class="glyphicon glyphicon-pencil"></i> Edit </asp:LinkButton>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <hr>
+                            <asp:LinkButton ID="btn_edit" class="btn btn-default pull-right" runat="server" OnClick="btn_edit_Click"><i class="glyphicon glyphicon-pencil"></i> Edit </asp:LinkButton>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </asp:Content>

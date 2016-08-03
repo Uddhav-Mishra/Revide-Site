@@ -13,39 +13,39 @@ namespace Revide {
     public partial class WebForm9 {
         
         /// <summary>
-        /// spn1 control.
+        /// Span1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spn1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Span1;
         
         /// <summary>
-        /// spn2 control.
+        /// Span2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spn2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Span2;
         
         /// <summary>
-        /// spn3 control.
+        /// Span3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spn3;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Span3;
         
         /// <summary>
-        /// spn4 control.
+        /// Span4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spn4;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Span4;
     }
 }

@@ -83,7 +83,7 @@
                     $("#VideoReport").table2excel({
                         exclude: ".excludeThisClass",
                         name: "Worksheet Name",
-                        filename: "SomeFile"
+                        filename: "VideoReport"
                     });
                 })
 

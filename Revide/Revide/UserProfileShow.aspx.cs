@@ -9,15 +9,18 @@ using Revide.DataLayer;
 using System.Data;
 using System.IO;
 using System.Text;
+using System.Diagnostics;
 
 namespace Revide
 {
     public partial class UserProfileShow : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            int id = 1; 
-            Query q = new Query();
+            
+          int id = Convert.ToInt32(Session["userID"]) ;
+            Query q = new Query() ;
             DataTable d = q.getUserProfile(id);
             rpt_userprofile.DataSource = d;
             rpt_userprofile.DataBind();

@@ -4,7 +4,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_Main" runat="server">
 
-    <div data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+    <div>
     <div>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -41,10 +41,10 @@
 
 
 
-    <div>
+    <div data-spy="scroll" data-target="#myScrollspy" data-offset="15">
         <div class="container">
             <div class="row">
-                <nav class="col-sm-3" id="myScrollspy">
+      <nav class="col-sm-3" id="myScrollspy">
       <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="600">
         <li><a href="#section1">Movies</a></li>
         <li><a href="#section2">TV Shows</a></li>
@@ -63,10 +63,10 @@
                             <asp:Repeater ID="rpt_movies" runat="server">
                                 <ItemTemplate>
                                     <div id="div_movies" runat="server" class="col-sm-6 col-md-3">
-                                        <a href="VideoDetails.aspx" class="thumbnail">
-                                            <img runat="server" id="img4" src='<%# DataBinder.Eval(Container.DataItem,"PosterSrc")%>'
-                                                alt="EMMA" height="345" width="460">
-                                        </a>
+                                        <a href="VideoDetails.aspx?video_id=<%# DataBinder.Eval(Container.DataItem,"ID")%>" class="thumbnail">
+                                                    <img runat="server" id="img4" src='<%# DataBinder.Eval(Container.DataItem,"PosterSrc")%>'
+                                                        alt="EMMA" height="345" width="460">
+                                                </a>
                                     </div>
                                 </ItemTemplate>
                             </asp:Repeater>
@@ -81,10 +81,10 @@
                                 <asp:Repeater ID="rpt_tv" runat="server">
                                     <ItemTemplate>
                                         <div id="div_movies" runat="server" class="col-sm-6 col-md-3">
-                                            <a href="VideoDetails.aspx" class="thumbnail">
-                                                <img runat="server" id="img4" src='<%# DataBinder.Eval(Container.DataItem,"PosterSrc")%>'
-                                                    alt="EMMA" height="345" width="460">
-                                            </a>
+                                            <a href="VideoDetails.aspx?video_id=<%# DataBinder.Eval(Container.DataItem,"ID")%>" class="thumbnail">
+                                                    <img runat="server" id="img4" src='<%# DataBinder.Eval(Container.DataItem,"PosterSrc")%>'
+                                                        alt="EMMA" height="345" width="460">
+                                                </a>
                                         </div>
                                     </ItemTemplate>
                                 </asp:Repeater>
@@ -99,7 +99,7 @@
                                     <asp:Repeater ID="rpt_web" runat="server">
                                         <ItemTemplate>
                                             <div id="div_movies" runat="server" class="col-sm-6 col-md-3">
-                                                <a href="VideoDetails.aspx" class="thumbnail">
+                                                <a href="VideoDetails.aspx?video_id=<%# DataBinder.Eval(Container.DataItem,"ID")%>" class="thumbnail">
                                                     <img runat="server" id="img4" src='<%# DataBinder.Eval(Container.DataItem,"PosterSrc")%>'
                                                         alt="EMMA" height="345" width="460">
                                                 </a>
@@ -117,10 +117,10 @@
                                         <asp:Repeater ID="rpt_recommended" runat="server">
                                             <ItemTemplate>
                                                 <div id="div_movies" runat="server" class="col-sm-6 col-md-3">
-                                                    <a href="VideoDetails.aspx" class="thumbnail">
-                                                        <img runat="server" id="img4" src='<%# DataBinder.Eval(Container.DataItem,"PosterSrc")%>'
-                                                            alt="EMMA" height="345" width="460">
-                                                    </a>
+                                                    <a href="VideoDetails.aspx?video_id=<%# DataBinder.Eval(Container.DataItem,"ID")%>" class="thumbnail">
+                                                    <img runat="server" id="img4" src='<%# DataBinder.Eval(Container.DataItem,"PosterSrc")%>'
+                                                        alt="EMMA" height="345" width="460">
+                                                </a>
                                                 </div>
                                             </ItemTemplate>
                                         </asp:Repeater>

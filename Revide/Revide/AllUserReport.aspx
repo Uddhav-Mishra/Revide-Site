@@ -70,7 +70,7 @@
                 $("#allUserReport").table2excel({
                     exclude: ".excludeThisClass",
                     name: "Worksheet Name",
-                    filename: "SomeFile"
+                    filename: "AllUserReport"
                 });
             })
 
