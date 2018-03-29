@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" href="css2/style.css" />
-    <link rel="stylesheet" href="css2/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/index.js"></script>
@@ -72,18 +72,14 @@
                             <form accept-charset="utf-8" action="#" class="simform">
                             <div class="sminputs">
                                 <div class="input full">
-                                    <!--input class="string optional singininput" maxlength="255" id="user-email"  placeholder="Email"
-                                        type="email" size="50" /-->
-                                    <asp:TextBox ID="login_email" runat="server" class="string optional singininput"
-                                        MaxLength="255" placeholder="Email" type="email" size="100"></asp:TextBox>
+                                    <input class="string optional singininput" maxlength="255" id="user-email" placeholder="Email"
+                                        type="email" size="50" />
                                 </div>
                             </div>
                             <div class="sminputs">
                                 <div class="input full">
-                                    <!--input class="string optional singininput" maxlength="255" id="user-pw"  placeholder="Password"
-                                        type="password" size="50" /-->
-                                    <asp:TextBox ID="login_password" runat="server" class="string optional singininput"
-                                        MaxLength="255" placeholder="Password" type="password" size="50"></asp:TextBox>
+                                    <input class="string optional singininput" maxlength="255" id="user-pw" placeholder="Password"
+                                        type="password" size="50" />
                                 </div>
                             </div>
                             <div class="simform__actions">
@@ -97,8 +93,7 @@
                         </div>
                         <div class="logmod__alter">
                             <div class="logmod__alter-container">
-                                <asp:Button ID="btnLogin" runat="server" Text="Login with FaceBook" OnClick="Login"
-                                    class="fblogin" />
+                                <asp:Button ID="btnLogin" runat="server" Text="Login with FaceBook" OnClick="Login" class="fblogin"/>
                                 <div class="g-signin2 loginButton" data-onsuccess="onSignIn">
                                     <span id="text">Sign In</span>
                                 </div>

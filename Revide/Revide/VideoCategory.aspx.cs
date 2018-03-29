@@ -19,16 +19,16 @@ namespace Revide
             if(Request.QueryString["page_id"]!=null)
             i= Int32.Parse( Request.QueryString["page_id"]);
 
-            string category=null;
+
             Query q = new Query();
-            DataTable d = q.getAll(category);
+            DataTable d = q.getAll();
             rpt_pg.DataSource = d;
             rpt_pg.DataBind();
             int n = (int)(Math.Ceiling(d.Rows.Count/5.0));
 
 
             //Query q = new Query();
-            DataTable dt = q.getByCategoryPages(category,i);
+            DataTable dt = q.getByCategoryPages(i);
             rpt_pg.DataSource = dt;
             rpt_pg.DataBind();
             if (!IsPostBack)

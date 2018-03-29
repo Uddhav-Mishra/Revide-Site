@@ -33,14 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit, Version=4.1.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="aspsnippets.facebookapi">
       <HintPath>..\..\..\..\..\Desktop\aspsnippets.facebookapi.dll</HintPath>
-    </Reference>
-    <Reference Include="itextsharp">
-      <HintPath>..\..\..\itextsharp-all-5.5.9\itextsharp-dll-core\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -61,43 +55,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AddAdmin.aspx" />
-    <Content Include="AddVideo.aspx" />
     <Content Include="AdminPage.aspx" />
     <Content Include="AllVideos.aspx" />
-    <Content Include="AdminPanel.aspx" />
     <Content Include="bin\aspsnippets.facebookapi.dll" />
     <Content Include="bin\Revide.dll" />
     <Content Include="bin\Revide.pdb" />
-    <Content Include="Chat.aspx" />
-    <Content Include="css2\bootstrap.min.css" />
-    <Content Include="css2\font-awesome.min.css" />
-    <Content Include="css2\mdb.min.css" />
-    <Content Include="css2\normalize.css" />
-    <Content Include="css2\style.css" />
     <Content Include="images\collage.png" />
-    <Content Include="images\Posters\C2.jpg" />
-    <Content Include="images\Posters\FD.jpg" />
-    <Content Include="images\Posters\Friends.jpg" />
-    <Content Include="images\Posters\GOT.jpg" />
-    <Content Include="images\Posters\IndependenceDay.jpg" />
-    <Content Include="images\Posters\Suits.jpg" />
-    <Content Include="images\Posters\SV.jpg" />
-    <Content Include="images\Posters\tarzan.jpg" />
-    <Content Include="images\Posters\TheShallows.jpg" />
-    <Content Include="images\Posters\Wazir.jpg" />
-    <Content Include="images\Posters\znmd.jpg" />
     <Content Include="images\revide.png" />
-    <Content Include="ManageAllUsers.aspx" />
-    <Content Include="ManageEndUsers.aspx" />
-    <Content Include="ManageVideos.aspx" />
     <Content Include="obj\Debug\Revide.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Revide.dll" />
     <Content Include="obj\Debug\Revide.pdb" />
     <Content Include="UserControls\Footer.ascx" />
     <Content Include="UserControls\Header.ascx" />
-    <Content Include="UpdateProfile.aspx" />
     <Content Include="UserLogin.aspx" />
+    <Content Include="UpdateProfile.aspx" />
     <Content Include="UserProfileShow.aspx" />
     <Content Include="VideoDetails.aspx" />
     <Content Include="Homepage.aspx" />
@@ -113,26 +84,8 @@
     <Content Include="VideoCategory.aspx" />
     <Content Include="AddMovies.aspx" />
     <Content Include="BlockUser.aspx" />
-    <Content Include="WebForm5.aspx" />
-    <Content Include="EndUserReport.aspx" />
-    <Content Include="VideoReport.aspx" />
-    <Content Include="AllUserReport.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddAdmin.aspx.cs">
-      <DependentUpon>AddAdmin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddAdmin.aspx.designer.cs">
-      <DependentUpon>AddAdmin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AddVideo.aspx.cs">
-      <DependentUpon>AddVideo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddVideo.aspx.designer.cs">
-      <DependentUpon>AddVideo.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AdminPage.aspx.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -147,42 +100,7 @@
     <Compile Include="AllVideos.aspx.designer.cs">
       <DependentUpon>AllVideos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminPanel.aspx.cs">
-      <DependentUpon>AdminPanel.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminPanel.aspx.designer.cs">
-      <DependentUpon>AdminPanel.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Chat.aspx.cs">
-      <DependentUpon>Chat.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Chat.aspx.designer.cs">
-      <DependentUpon>Chat.aspx</DependentUpon>
-    </Compile>
     <Compile Include="DataLayer\Query.cs" />
-    <Compile Include="ManageAllUsers.aspx.cs">
-      <DependentUpon>ManageAllUsers.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ManageAllUsers.aspx.designer.cs">
-      <DependentUpon>ManageAllUsers.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ManageEndUsers.aspx.cs">
-      <DependentUpon>ManageEndUsers.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ManageEndUsers.aspx.designer.cs">
-      <DependentUpon>ManageEndUsers.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ManageVideos.aspx.cs">
-      <DependentUpon>ManageVideos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ManageVideos.aspx.designer.cs">
-      <DependentUpon>ManageVideos.aspx</DependentUpon>
-    </Compile>
     <Compile Include="MasterPage\Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -205,19 +123,19 @@
     <Compile Include="UserControls\Header.ascx.designer.cs">
       <DependentUpon>Header.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UpdateProfile.aspx.cs">
-      <DependentUpon>UpdateProfile.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UpdateProfile.aspx.designer.cs">
-      <DependentUpon>UpdateProfile.aspx</DependentUpon>
-    </Compile>
     <Compile Include="UserLogin.aspx.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserLogin.aspx.designer.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserProfileShow.aspx.cs">
       <DependentUpon>UserProfileShow.aspx</DependentUpon>
@@ -261,43 +179,13 @@
     <Compile Include="BlockUser.aspx.designer.cs">
       <DependentUpon>BlockUser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm5.aspx.cs">
-      <DependentUpon>WebForm5.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm5.aspx.designer.cs">
-      <DependentUpon>WebForm5.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EndUserReport.aspx.cs">
-      <DependentUpon>EndUserReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EndUserReport.aspx.designer.cs">
-      <DependentUpon>EndUserReport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="VideoReport.aspx.cs">
-      <DependentUpon>VideoReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="VideoReport.aspx.designer.cs">
-      <DependentUpon>VideoReport.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AllUserReport.aspx.cs">
-      <DependentUpon>AllUserReport.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AllUserReport.aspx.designer.cs">
-      <DependentUpon>AllUserReport.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="css\" />
     <Folder Include="Forms\" />
-    <Folder Include="images\Profile\" />
     <Folder Include="js\" />
     <Folder Include="obj\Debug\Package\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Revide\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="MasterPage\Main.Master" />
@@ -305,9 +193,6 @@
   <ItemGroup>
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\Revide.csprojResolveAssemblyReference.cache" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
@@ -317,7 +202,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52401</DevelopmentServerPort>
+          <DevelopmentServerPort>54509</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

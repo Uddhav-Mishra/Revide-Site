@@ -1,5 +1,0 @@
-E:\Projects\Login\Login\bin\Login.dll
-E:\Projects\Login\Login\bin\Login.pdb
-E:\Projects\Login\Login\obj\Debug\ResolveAssemblyReference.cache
-E:\Projects\Login\Login\obj\Debug\Login.dll
-E:\Projects\Login\Login\obj\Debug\Login.pdb

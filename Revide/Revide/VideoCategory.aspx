@@ -24,18 +24,17 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_Main" runat="server">
     <nav class="col-sm-3">
       <ul class="nav nav-pills nav-stacked left-nav">
-        <li><a href="Allvideos.aspx?category=Action">Action</a></li>
-        <li><a href="Allvideos.aspx?category=Comedy">Comedy</a></li>
-        <li><a href="Allvideos.aspx?category=drama">Drama</a></li>
-        <li><a href="Allvideos.aspx?category=Thriller">Thriller</a></li>
-        <li><a href="Allvideos.aspx?category=Fiction">Fiction</a></li>
-        <li><a href="Allvideos.aspx?category=Horror">Horror</a></li>
-        <li><a href="Allvideos.aspx?category=scifi">Sci-Fi</a></li>
-        <li><a href="Allvideos.aspx?category=Adventure">Adventure</a></li>
+        <li><a href="#Action">Action</a></li>
+        <li><a href="#Comedy">Comedy</a></li>
+        <li><a href="#Thriller">Thriller</a></li>
+        <li><a href="#Fiction">Fiction</a></li>
+        <li><a href="#Horror">Horror</a></li>
+        <li><a href="#Sci-Fi">Sci-Fi</a></li>
+        <li><a href="#Adventure">Adventure</a></li>
       </ul>
     </nav>
     
-    <!--div class="col-sm-9" style="margin-left=200px">
+    <div class="col-sm-9" style="margin-left=200px">
         <div class="panel-group">
             <asp:Repeater ID="rpt_pg" runat="server" >
                 <ItemTemplate>
@@ -77,7 +76,7 @@
             </ul>
         </div>
 
-    </div-->
+    </div>
     
 
 </asp:Content>

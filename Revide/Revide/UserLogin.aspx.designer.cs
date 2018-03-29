@@ -76,24 +76,6 @@ namespace Revide {
         protected global::System.Web.UI.WebControls.Button BtnSubmit;
         
         /// <summary>
-        /// login_email control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox login_email;
-        
-        /// <summary>
-        /// login_password control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox login_password;
-        
-        /// <summary>
         /// BtnSignIn control.
         /// </summary>
         /// <remarks>
